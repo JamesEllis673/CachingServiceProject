@@ -1,0 +1,21 @@
+<div class="sessionCaching-container">
+  <h1>Caching In Session Data</h1>
+  <div class="sessionCaching-buttonsContainer">
+    <button class="sessionCaching-button" *ngFor="let user of usersData" (click)="getUserData(user.id)">{{ user.name }}</button>
+  </div>
+
+  <div class="sessionCaching-userData" *ngIf="currentUserData">
+    <h3>Name: {{ currentUserData.name }}</h3>
+    <h3>Phone: {{ currentUserData.phone }}</h3>
+    <h3>Website: {{ currentUserData.website }}</h3>
+    <h3>Company: {{ currentUserData.company.name }}</h3>
+    <br>
+    <h4 *ngIf="duration">Call Duration {{ duration }} seconds</h4>
+  </div>
+
+  <div class="sessionCaching-buttonsContainer">
+    <button class="sessionCaching-button" (click)="logCache()">Log Cache</button>
+    <button class="sessionCaching-button" (click)="clearCache()">Clear Cache</button>
+  </div>
+</div>
+

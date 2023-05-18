@@ -1,0 +1,11 @@
+.localCaching {
+  &-buttonsContainer {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+  }
+
+  &-button {
+    margin-right: 5px;
+  }
+}
